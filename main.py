@@ -1,6 +1,34 @@
 import json
 import random
 
+
+def load_dictionary():
+    try:
+        with open('dictionary.json', 'r') as file:
+            dictionary = json.load(file)
+    except FileNotFoundError:
+        return {}
+
+
+def save_dictionary():
+    with open('dictionary', 'w') as file:
+        json.dump(dictionary)
+
+
+def print_all_words():
+    for word in dictionary:
+        print(word)
+
+def print_random_words():
+    if dictionary:
+        random_word = random.choice(list(dictionary.keys()))
+        print(f'{random_word}: {dictionary[random_word]}')
+    else:
+        print(f'{random_word} not found')
+    
+
+
+# =============================================
 try:
     with open('dictionary.json', 'r') as file:
         dictionary = json.load(file)
@@ -39,7 +67,7 @@ while True:
 
     
 
-
+# ===============
 
 # import json
 # import random
