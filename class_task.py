@@ -39,7 +39,7 @@ class AI:
         for key, value in AI.matches.items():
             print(f'{key}: {value}')
 
-
+    @staticmethod
     def predict():
         try:
             selected_match_number = int(input('choose number: '))
@@ -54,25 +54,7 @@ class AI:
         else:
             pass
         
+class Test(AI):
+    pass
 
 
-
-
-AI.greetings()
-ai = AI( username=input('name: '), club=input('club: '))
-ai.know_user()
-AI.list_of_matches()
-AI.predict()
-
-
-
-#  if selected_match_number == 1:
-#             choice = random.choice(['rangers', 'celtic'])
-#             print(f'i will go for {choice}')
-#         elif selected_match_number == 2:
-#             choice = random.choice(['soton', 'luton'])
-#             print(f'i will go for {choice}')
-#         elif selected_match_number == 3:
-#             choice = random.choice(['everton', 'palace'])
-#             print(f'i will go for {choice}')
-#         else: print('wrong input')
