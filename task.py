@@ -29,7 +29,7 @@ class AI:
         print(f'Hi i am {AI.name}, a {AI.model_type}. I specialize in predicting the outcome of football matches')
         print('can i know your name and club you support?')
 
-    @property
+    # @property
     def know_user(self): 
         return (f'Nice to meet you {self.username}. You support a great club in {self.club}')
 
@@ -56,8 +56,8 @@ class AI:
 
 
 # AI.greetings()
-# ai = AI(input('name: '),  input('club: '))
-# ai.know_user()
+ai = AI('joe',  'ars')
+ai.know_user()
 # ai.list_of_matches()
 # ai.predict()
 
