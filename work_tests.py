@@ -128,5 +128,17 @@ for experimentNumber in range(totalExperiments):
     if has_streak(coinFlips, streakLength):
         numberOfStreaks += 1
 
-pprint.pprint('Chance of streak: %s%%' % (numberOfStreaks / totalExperiments * 100))
+# pprint.pprint('Chance of streak: %s%%' % (numberOfStreaks / totalExperiments * 100))
+
+
+
+print("""
+                hi senior man i hope you are doing great
+        """)
+
+joe = '''joe'''
+
+
+
+
 
