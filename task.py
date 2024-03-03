@@ -31,7 +31,7 @@ class AI:
 
     # @property
     def know_user(self): 
-        return (f'Nice to meet you {self.username}. You support a great club in {self.club}')
+        print(f'Nice to meet you {self.username}. You support a great club in {self.club}')
 
     @classmethod
     def list_of_matches(cls):
@@ -55,10 +55,12 @@ class AI:
             pass
 
 
-# AI.greetings()
-ai = AI('joe',  'ars')
+AI.greetings()
+name = input('name: ')
+club = input('club: ')
+ai = AI(name, club)
 ai.know_user()
-# ai.list_of_matches()
-# ai.predict()
+ai.list_of_matches()
+ai.predict()
 
 
