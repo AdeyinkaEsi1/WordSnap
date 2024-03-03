@@ -33,17 +33,30 @@
 
 
 
-print(int.__add__(4, 12))
-print(str.__add__('hello', ' world'))
+# print(int.__add__(4, 12))
+# print(str.__add__('hello', ' world'))
 
-class Devs:
-    comapny = 'Diarupt'
+# class Devs:
+#     comapny = 'Diarupt'
 
-    @classmethod
-    def get_stack(cls, stack, empname):
-        empname = input('Enter employee name: ')
-        print(f'The stack of {empname} of {Devs.comapny} is {stack}')
+#     @classmethod
+#     def get_stack(cls, stack, empname):
+#         empname = input('Enter employee name: ')
+#         print(f'The stack of {empname} of {Devs.comapny} is {stack}')
 
 
 
-Devs.get_stack('Python', 'Josh')
+# Devs.get_stack('Python', 'Josh')
+
+alist = [
+'Lists of animals',
+'Lists of aquarium life',
+'Lists of biologists by author abbreviation',
+'Lists of cultivars']
+
+for i in alist:
+    print(f'* {i}')
+
+
+
+
