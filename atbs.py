@@ -54,9 +54,30 @@ alist = [
 'Lists of biologists by author abbreviation',
 'Lists of cultivars']
 
-for i in alist:
-    print(f'* {i}')
+# for i in alist:
+    # print(f'* {i}')
 
 
+# apples Alice dogs
+# oranges Bob cats
+# cherries Carol moose
+# banana David goose
+
+tableData = [['apples', 'oranges', 'cherries', 'banana'],
+['Alice', 'Bob', 'Carol', 'David'],
+['dogs', 'cats', 'moose', 'goose']]
 
 
+def printTable(tableData):
+    # Find the maximum width of each column
+    col_widths = [max(len(item) for item in col) for col in zip(*tableData)]
+
+    # Transpose the table for easy printing
+    transposed_table = [list(row) for row in zip(*tableData)]
+
+    # Print the table with right-justified columns
+    for row in transposed_table:
+        print(''.join(item.rjust(width) for item, width in zip(row, col_widths)))
+
+
+printTable(tableData)
