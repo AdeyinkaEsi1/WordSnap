@@ -63,21 +63,74 @@ alist = [
 # cherries Carol moose
 # banana David goose
 
-tableData = [['apples', 'oranges', 'cherries', 'banana'],
-['Alice', 'Bob', 'Carol', 'David'],
-['dogs', 'cats', 'moose', 'goose']]
+# tableData = [['apples', 'oranges', 'cherries', 'banana'],
+# ['Alice', 'Bob', 'Carol', 'David'],
+# ['dogs', 'cats', 'moose', 'goose']]
 
 
-def printTable(tableData):
-    # Find the maximum width of each column
-    col_widths = [max(len(item) for item in col) for col in zip(*tableData)]
+# def printTable(tableData):
+#     # Find the maximum width of each column
+#     col_widths = [max(len(item) for item in col) for col in zip(*tableData)]
 
-    # Transpose the table for easy printing
-    transposed_table = [list(row) for row in zip(*tableData)]
+#     # Transpose the table for easy printing
+#     transposed_table = [list(row) for row in zip(*tableData)]
 
-    # Print the table with right-justified columns
-    for row in transposed_table:
-        print(''.join(item.rjust(width) for item, width in zip(row, col_widths)))
+#     # Print the table with right-justified columns
+#     for row in transposed_table:
+#         print(''.join(item.rjust(width) for item, width in zip(row, col_widths)))
 
 
-printTable(tableData)
+# printTable(tableData)
+
+# ff= 'p'
+# print(ff.isdecimal())
+
+
+
+import re
+
+
+heroRegex = re.compile (r'Batman|Tina Fey')
+mo1 = heroRegex.search('Batman and Tina Fey')
+print(mo1.group())
+
+# =======================================
+# Special characters
+# \	escape special characters
+# .	matches any character
+# ^	matches beginning of string
+# $	matches end of string
+# [5b-d]	matches any chars '5', 'b', 'c' or 'd'
+# [^a-c6]	matches any char except 'a', 'b', 'c' or '6'
+# R|S	matches either regex R or regex S
+# ()	creates a capture group and indicates precedence
+# Quantifiers===============================================
+# *	0 or more (append ? for non-greedy)
+# +	1 or more (append ? for non-greedy)
+# ?	0 or 1 (append ? for non-greedy)
+# {m}	exactly mm occurrences
+# {m, n}	from m to n. m defaults to 0, n to infinity
+# {m, n}?	from m to n, as few as possible
+# Special sequences=========================================
+# \A	start of string
+# \b	matches empty string at word boundary (between \w and \W)
+# \B	matches empty string not at word boundary
+# \d	digit
+# \D	non-digit
+# \s	whitespace: [ \t\n\r\f\v]
+# \S	non-whitespace
+# \w	alphanumeric: [0-9a-zA-Z_]
+# \W	non-alphanumeric
+# \Z	end of string
+# \g<id>	matches a previously defined group
+# Special sequences================================================
+# (?iLmsux)	matches empty string, sets re.X flags
+# (?:...)	non-capturing version of regular parentheses
+# (?P...)	matches whatever matched previously named group
+# (?P=)	digit
+# (?#...)	a comment; ignored
+# (?=...)	lookahead assertion: matches without consuming
+# (?!...)	negative lookahead assertion
+# (?<=...)	lookbehind assertion: matches if preceded
+# (?<!...)	negative lookbehind assertion
+# (?(id)yes|no)	match 'yes' if group 'id' matched, else 'no'
