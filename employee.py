@@ -1,10 +1,8 @@
-
 import requests
 
 
 class Employee:
     """A sample Employee class"""
-
     raise_amt = 1.05
 
     def __init__(self, first, last, pay):
