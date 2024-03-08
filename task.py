@@ -1,14 +1,3 @@
-# model = {
-#     'name': 'Emile',
-#     'model_type': 'Predictive AI',
-#     'desc': [
-#         'introduces itself',
-#         'takes name and club input from user and responds' -- instance method
-#         'returns list of matches available'
-#         'takes input and predict game outcome'
-#     ]
-# }
-
 import random
 
 class AI:
