@@ -3,6 +3,8 @@ import random
 
 
 def load_dictionary():
+    """
+    open a dictionary file and load the content into a dictionary"""
     try:
         with open('dictionary.json', 'r') as file:
             dictionary = json.load(file)
@@ -12,16 +14,22 @@ def load_dictionary():
 
 
 def save_dictionary(dictionary):
+    """
+    save the dictionary to a file"""
     with open('dictionary.json', 'w') as file:
         json.dump(dictionary, file)
 
 
 def print_all_words(dictionary):
+    """
+    print all the words in the dictionary"""
     for word in dictionary:
         print(word)
 
 
 def print_random_word(dictionary):
+    """
+    print a random word from the dictionary"""
     if dictionary:
         random_word = random.choice(list(dictionary.keys()))
         print(f'{random_word}: {dictionary[random_word]}')
@@ -30,6 +38,8 @@ def print_random_word(dictionary):
 
 
 def add_new_word(dictionary):
+    """
+    add a new word to the dictionary"""
     new_word = input('Enter the new word: ')
     meaning = input(f'Enter the meaning of "{new_word}": ')
     dictionary[new_word.lower()] = meaning
@@ -38,11 +48,15 @@ def add_new_word(dictionary):
 
 
 def print_history(history):
+    """
+    print the history of user inputs"""
     for history_item in history:
         print(history_item)
 
 
 def main():
+    """
+    main function to run the program"""
     dictionary = load_dictionary()
     user_input_history = []
 
