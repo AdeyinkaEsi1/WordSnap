@@ -9,7 +9,8 @@ class Employee:
         self.first = first
         self.last = last
         self.pay = pay
-
+    """
+    instance method with property decorator"""
     @property
     def email(self):
         return '{}.{}@email.com'.format(self.first, self.last)
